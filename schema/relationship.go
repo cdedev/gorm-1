@@ -440,11 +440,11 @@ func (schema *Schema) guessRelation(relation *Relationship, field *Field, gl gue
 	// build references
 	for idx, foreignField := range foreignFields {
 		// use same data type for foreign keys
-		foreignField.DataType = primaryFields[idx].DataType
-		foreignField.GORMDataType = primaryFields[idx].GORMDataType
-		if foreignField.Size == 0 {
-			foreignField.Size = primaryFields[idx].Size
-		}
+		//foreignField.DataType = primaryFields[idx].DataType
+		//foreignField.GORMDataType = primaryFields[idx].GORMDataType
+		//if foreignField.Size == 0 {
+		//	foreignField.Size = primaryFields[idx].Size
+		//}
 
 		relation.References = append(relation.References, &Reference{
 			PrimaryKey:    primaryFields[idx],
